@@ -19,14 +19,14 @@ export default class LoadEarlier extends React.Component {
     if (this.props.isLoadingEarlier === false) {
       return (
         <Text style={[styles.text, this.props.textStyle]}>
-          {this.props.label}
+          {this.props.earlierLabel?this.props.earlierLabel:this.props.label}
         </Text>
       );
     }
     return (
       <View>
         <Text style={[styles.text, this.props.textStyle, { opacity: 0 }]}>
-          {this.props.label}
+           {this.props.earlierLabel?this.props.earlierLabel:this.props.label}
         </Text>
         <ActivityIndicator
           color="white"
